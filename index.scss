@@ -1,0 +1,410 @@
+$blend-white: rgb(230, 230, 230);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+nav {
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-li {
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+
+  .nav-li-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+  }
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(250, 154, 0);
+
+  /* border: 3px solid rgb(255, 169, 30); */
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (hover: none) {
+  .ball {
+    width: 0;
+    height: 0;
+  }
+}
+
+.top-section {
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+  position: relative;
+
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    background-color: $blend-white;
+
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+  }
+
+  .who-am-i {
+    mix-blend-mode: difference;
+    font-size: 50px;
+  }
+}
+
+.brief-about {
+  display: grid;
+  gap: 10vw;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10vh;
+
+  .left-brief {
+    display: grid;
+    align-self: center;
+    font-weight: 450;
+    font-style: normal;
+    font-size: clamp(1.3em, 2.1vw, 2.3em);
+    line-height: 1.45;
+  }
+
+  .right-brief {
+    display: flex;
+    flex-direction: column;
+
+    .right-text {
+      height: 50%;
+      font-weight: 300;
+      font-style: normal;
+      font-size: clamp(1em, 1.4vw, 1.7em);
+      line-height: 1.45;
+    }
+
+    .right-btn {
+      display: flex;
+      justify-content: flex-end;
+
+      .abt-btn-container {
+        padding: 2px;
+      }
+    }
+  }
+}
+
+.works {
+  .company-exp {
+    .company-exp-title {
+      margin: 5vh 10%;
+      font-size: 2em;
+      line-height: 0.95em;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: rgb(230, 230, 230);
+    }
+
+    .company-container {
+      position: relative;
+
+      .qb {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        background-image: url("/edited_UQ(copy).jpg");
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        position: relative;
+
+        .client-company-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 25px;
+
+          .client-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            justify-self: center;
+
+            .fast-retailing {
+              height: 65px;
+              width: 65px;
+              // position: absolute;
+              // top: 40%;
+              // left: 35%;
+              position: relative;
+              cursor: pointer;
+            }
+          }
+
+          .company-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-self: center;
+            align-self: center;
+
+            .qburst-svg {
+              cursor: pointer;
+              display: inline-block;
+              width: 200px;
+              position: relative;
+
+              // position: absolute;
+              // top: 42%;
+              // left: 45%;
+              height: 45px;
+            }
+          }
+
+          .client {
+            // position: absolute;
+            // top: 50%;
+            // left: 35%;
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+          }
+
+          .company {
+            color: white;
+            font-size: 15px;
+            position: relative;
+            text-align: center;
+            // position: absolute;
+            // top: 50%;
+            // left: 55%;
+          }
+        }
+      }
+
+      .infy {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        background-image: url("/rei_new.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .infy-btn {
+          position: relative;
+
+          .infy-svg {
+            width: 200px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .hori-scroll-container-100 {
+    width: 100%;
+    overflow-x: hidden;
+
+    .hori-scroll-container {
+      width: 400%;
+      height: 100vh;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .panel {
+        width: 50%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        font-size: 4em;
+      }
+
+      .amplication {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        background-image: url("/amplication_bg4.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mathesar {
+        background-color: green;
+      }
+
+      .photograph-agency {
+        background-color: red;
+      }
+
+      .fest {
+        background-color: aqua;
+      }
+    }
+  }
+}
+
+.footer-section {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  #footer-dot {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background-color: $blend-white;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+  }
+
+  .link-with-ruler {
+    .ruler {
+      height: 1px;
+      background-color: rgb(197, 191, 191);
+    }
+
+    .footer-links-container {
+      padding: 20px 0 10px 0;
+      display: flex;
+      justify-content: space-between;
+
+      .left-copyright {
+        mix-blend-mode: difference;
+      }
+
+      .right-social-links {
+        display: flex;
+        gap: 20px;
+
+        .social-link {
+          text-transform: uppercase;
+          color: white;
+          font-size: 15px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// reusable
+.magnet-content {
+  display: inline-block;
+}
+
+.circular-btn {
+  height: calc(min(12rem, 20vw));
+  width: calc(min(12rem, 20vw));
+  border-radius: 50%;
+  background-color: rgb(206, 206, 206);
+  color: black;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: calc(min(3.5rem, 4.5vw));
+}
+
+.hvr-underln-anim {
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(155, 155, 155);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.panel-title {
+  position: relative;
+  border: 1px solid rgb(250, 154, 0);
+  box-shadow: 0 0 10px rgb(250, 154, 0);
+  border-radius: 50%;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
