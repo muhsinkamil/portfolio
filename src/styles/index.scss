@@ -322,6 +322,35 @@ ul {
   flex-direction: column;
   justify-content: space-between;
 
+  .footer-content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20vh;
+
+    .footer-name {
+      font-size: 6vw;
+      text-align: center;
+    }
+
+    .link-with-reach {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .connect {
+        text-align: center;
+      }
+
+      .social-link-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+
   #footer-dot {
     width: 8vh;
     height: 8vh;
