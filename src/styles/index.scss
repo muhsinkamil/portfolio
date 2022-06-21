@@ -298,8 +298,28 @@ ul {
         align-items: center;
       }
 
+      .mathesar-panel-title {
+        position: relative;
+        cursor: pointer;
+      }
+
       .mathesar {
-        background-color: green;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        background-image: url("/assets/mathesar.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .lighthouse-panel-title {
