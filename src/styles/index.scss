@@ -1,5 +1,9 @@
 $blend-white: rgb(230, 230, 230);
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +86,8 @@ ul {
 
   .who-am-i {
     mix-blend-mode: difference;
-    font-size: 50px;
+    font-size: 10vw;
+    text-align: center;
   }
 }
 

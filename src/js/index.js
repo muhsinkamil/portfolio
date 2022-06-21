@@ -127,3 +127,15 @@ footerDotTl.to("#footer-dot", {
   duration: 2.5,
   ease: Bounce.easeOut,
 });
+
+function goToWorks() {
+  document.querySelector("#works").scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
+function goToContact() {
+  document.querySelector("#contact").scrollIntoView({
+    behavior: "smooth",
+  });
+}
