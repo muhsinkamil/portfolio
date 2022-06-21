@@ -95,7 +95,6 @@ ScrollTrigger.create({
   pin: true,
   snap: 1,
   scrub: 1,
-  markers: true,
   anticipatePin: 1,
   pinSpacing: false,
 });

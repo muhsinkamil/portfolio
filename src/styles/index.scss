@@ -365,12 +365,18 @@ ul {
   height: calc(min(12rem, 20vw));
   width: calc(min(12rem, 20vw));
   border-radius: 50%;
-  background-color: rgb(206, 206, 206);
+  background-color: $blend-white;
   color: black;
   outline: none;
   border: none;
   cursor: pointer;
-  font-size: calc(min(3.5rem, 4.5vw));
+  font-size: calc(min(2.5rem, 3.5vw));
+
+  .circular-btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hvr-underln-anim {
