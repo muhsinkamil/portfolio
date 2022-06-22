@@ -85,6 +85,7 @@ ul {
   }
 
   .who-am-i {
+    font-family: "Rubik Moonrocks", "Familjen Grotesk", sans-serif;
     mix-blend-mode: difference;
     font-size: 10vw;
     text-align: center;
@@ -96,6 +97,10 @@ ul {
   gap: 10vw;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 10vh;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 
   .left-brief {
     display: grid;
@@ -399,6 +404,7 @@ ul {
         display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
       }
     }
   }
