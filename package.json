@@ -2,10 +2,10 @@
   "name": "mohamed_muhsin_kamil",
   "version": "1.0.0",
   "description": "Portfolio",
-  "main": "index.js",
+  "source": "src/index.js",
   "scripts": {
     "start": "npx parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --dist-dir public"
   },
   "repository": {
     "type": "git",

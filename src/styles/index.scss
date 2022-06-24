@@ -203,13 +203,11 @@ ul {
             .qburst-svg {
               cursor: pointer;
               display: inline-block;
-              width: 200px;
               position: relative;
 
               // position: absolute;
               // top: 42%;
               // left: 45%;
-              height: 45px;
             }
           }
 
@@ -337,8 +335,8 @@ ul {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        height: 20vw;
-        width: 20vw;
+        width: 25vw;
+        height: 25vw;
         font-size: 3vw;
         font-style: italic;
         letter-spacing: 2px;
@@ -395,6 +393,9 @@ ul {
           height: 25vw;
           font-size: calc(min(30px, 1em));
           color: white;
+          font-size: 3vw;
+          font-style: italic;
+          letter-spacing: 2px;
         }
       }
     }
@@ -529,9 +530,9 @@ ul {
 
 .panel-title {
   position: relative;
-  border: 1px solid rgb(250, 154, 0);
-  box-shadow: 0 0 10px rgb(250, 154, 0);
-  border-radius: 50%;
+  // border: 1px solid rgb(250, 154, 0);
+  // box-shadow: 0 0 10px rgb(250, 154, 0);
+  // border-radius: 50%;
   padding: 5vw;
   display: flex;
   justify-content: center;
