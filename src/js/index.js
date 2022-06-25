@@ -111,7 +111,6 @@ ScrollTrigger.create({
   end: "bottom top",
   scrub: 1,
   anticipatePin: 1,
-  markers: true,
   pinSpacing: false,
 });
 
