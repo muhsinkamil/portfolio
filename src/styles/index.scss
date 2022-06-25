@@ -142,11 +142,11 @@ ul {
     top: 40%;
     writing-mode: vertical-rl;
     font-weight: 700;
-    font-size: 2em;
+    font-size: calc(max(2vw, 16px));
     color: #fff;
     background-color: black;
     transform: rotate(180deg);
-    padding: 20px;
+    padding: calc(min(3vw, 20px));
     text-align: center;
   }
   .company-exp {
