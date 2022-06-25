@@ -52,7 +52,7 @@ ul {
   left: 0;
   background-color: $blend-white;
   mix-blend-mode: difference;
-
+  z-index: 100;
   /* border: 3px solid rgb(255, 169, 30); */
   border-radius: 50%;
   pointer-events: none;
@@ -136,6 +136,19 @@ ul {
 }
 
 .works {
+  .works-category-title {
+    position: sticky;
+    z-index: 99;
+    top: 40%;
+    writing-mode: vertical-rl;
+    font-weight: 700;
+    font-size: 2em;
+    color: #fff;
+    background-color: black;
+    transform: rotate(180deg);
+    padding: 20px;
+    text-align: center;
+  }
   .company-exp {
     .company-exp-title {
       margin: 5vh 10%;
@@ -274,14 +287,6 @@ ul {
       height: 100vh;
       display: flex;
       flex-wrap: nowrap;
-
-      .panel {
-        width: 50%;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        font-size: 4em;
-      }
 
       .amplication {
         &::before {
@@ -513,20 +518,27 @@ ul {
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    height: 100%;
     transform: scaleX(0);
-    height: 2px;
     bottom: -2px;
     left: 0;
     background-color: rgb(155, 155, 155);
-    transform-origin: bottom right;
+    transform-origin: bottom left;
     transition: transform 0.25s ease-out;
   }
 
   &:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: bottom right;
   }
+}
+
+.panel {
+  width: 50%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-size: 4em;
 }
 
 .panel-title {

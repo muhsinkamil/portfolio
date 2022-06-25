@@ -99,6 +99,22 @@ ScrollTrigger.create({
   pinSpacing: false,
 });
 
+const worksTitleTl = gsap.timeline();
+worksTitleTl
+  .from(".works-category-title", { opacity: 0 })
+  .to(".works-category-title", { opacity: 0.8 });
+
+ScrollTrigger.create({
+  animation: worksTitleTl,
+  trigger: ".qb",
+  start: "top 80%",
+  end: "bottom top",
+  scrub: 1,
+  anticipatePin: 1,
+  markers: true,
+  pinSpacing: false,
+});
+
 let personalWorkSections = gsap.utils.toArray(".panel");
 
 gsap.to(personalWorkSections, {
@@ -129,7 +145,7 @@ footerDotTl.to("#footer-dot", {
 });
 
 function goToWorks() {
-  document.querySelector("#works").scrollIntoView({
+  document.querySelector(".qb").scrollIntoView({
     behavior: "smooth",
   });
 }
