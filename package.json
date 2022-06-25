@@ -1,0 +1,26 @@
+{
+  "name": "mohamed_muhsin_kamil",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "source": "src/index.js",
+  "scripts": {
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir public",
+    "deploy": "rm -rf public && npm run build && firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhsinkamil/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhsinkamil/portfolio/issues"
+  },
+  "homepage": "https://github.com/muhsinkamil/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.1",
+    "parcel": "^2.6.1"
+  }
+}

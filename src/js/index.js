@@ -95,7 +95,21 @@ ScrollTrigger.create({
   pin: true,
   snap: 1,
   scrub: 1,
-  markers: true,
+  anticipatePin: 1,
+  pinSpacing: false,
+});
+
+const worksTitleTl = gsap.timeline();
+worksTitleTl
+  .from(".works-category-title", { opacity: 0 })
+  .to(".works-category-title", { opacity: 0.8 });
+
+ScrollTrigger.create({
+  animation: worksTitleTl,
+  trigger: ".qb",
+  start: "top 80%",
+  end: "bottom top",
+  scrub: 1,
   anticipatePin: 1,
   pinSpacing: false,
 });
@@ -128,3 +142,15 @@ footerDotTl.to("#footer-dot", {
   duration: 2.5,
   ease: Bounce.easeOut,
 });
+
+function goToWorks() {
+  document.querySelector(".qb").scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
+function goToContact() {
+  document.querySelector("#contact").scrollIntoView({
+    behavior: "smooth",
+  });
+}
