@@ -100,6 +100,8 @@ ScrollTrigger.create({
 });
 
 const worksTitleTl = gsap.timeline();
+const worksCategoryTitle = document.querySelector(".works-category-title");
+
 worksTitleTl
   .from(".works-category-title", { opacity: 0 })
   .to(".works-category-title", { opacity: 0.8 });
@@ -112,11 +114,12 @@ ScrollTrigger.create({
   scrub: 1,
   anticipatePin: 1,
   pinSpacing: false,
+  onEnter: (self) => (worksCategoryTitle.innerText = "Experience"),
 });
 
 let personalWorkSections = gsap.utils.toArray(".panel");
 
-gsap.to(personalWorkSections, {
+let horizontalScrollSection = gsap.to(personalWorkSections, {
   xPercent: -100 * (personalWorkSections.length - 1),
   ease: "none",
   scrollTrigger: {
@@ -127,6 +130,22 @@ gsap.to(personalWorkSections, {
     end: () =>
       "+=" + document.querySelector(".hori-scroll-container").offsetWidth,
   },
+});
+
+ScrollTrigger.create({
+  containerAnimation: horizontalScrollSection,
+  trigger: ".amplication",
+  start: "left left",
+  onEnter: (self) => (worksCategoryTitle.innerText = "Opensource"),
+  onLeaveBack: (self) => (worksCategoryTitle.innerText = "Experience"),
+});
+
+ScrollTrigger.create({
+  containerAnimation: horizontalScrollSection,
+  trigger: ".photograph-agency",
+  start: "left center",
+  onEnter: (self) => (worksCategoryTitle.innerText = "Personal"),
+  onLeaveBack: (self) => (worksCategoryTitle.innerText = "Opensource"),
 });
 
 // Footer ball
